@@ -1,0 +1,456 @@
+:root {
+    --bg: #EBE5DB;
+    --pink: #FF107A;
+    --yellow: #FFD100;
+    --purple: #583d9e;
+    --orange: #FF5E00;
+    --green: #5d8e57;
+    --cyan: #00F0FF;
+    --dark: #2A0845
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: var(--bg);
+    background-image: radial-gradient(rgba(255, 16, 122, .15) 2px, transparent 2px);
+    background-size: 30px 30px;
+    color: var(--dark);
+    overflow-x: hidden
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-fredoka {
+    font-family: 'Fredoka', sans-serif
+}
+
+.bg-magic-gradient {
+    background: linear-gradient(135deg, #FF107A, #9D00FF, #FF5E00);
+    background-size: 300% 300%;
+    animation: magic 8s ease infinite
+}
+
+@keyframes magic {
+
+    0%,
+    100% {
+        background-position: 0 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+}
+
+.box-shadow-pop {
+    box-shadow: 6px 6px 0 var(--dark);
+    border: 3px solid var(--dark)
+}
+
+.blob {
+    border-radius: 40% 60% 70% 30%/40% 50% 60% 50%;
+    animation: morph 8s ease-in-out infinite alternate
+}
+
+@keyframes morph {
+    to {
+        border-radius: 60% 40% 30% 70%/50% 60% 40% 50%
+    }
+}
+
+.nav-container {
+    left: -16px;
+    z-index: 50
+}
+
+.nav-tab {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px 14px 24px;
+    border-radius: 0 24px 24px 0;
+    border: 4px solid var(--dark);
+    border-left: 0;
+    box-shadow: 6px 6px 0 var(--dark);
+    font-family: Fredoka, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .35s
+}
+
+.nav-tab:hover {
+    transform: translateX(12px)
+}
+
+.active {
+    transform: translateX(20px)
+}
+
+.tab-pink {
+    background: var(--pink);
+    color: #fff
+}
+
+.tab-yellow {
+    background: var(--yellow);
+    color: var(--dark)
+}
+
+.tab-cyan {
+    background: var(--cyan);
+    color: var(--dark)
+}
+
+.tab-orange {
+    background: var(--orange);
+    color: #fff
+}
+
+.tab-purple {
+    background: var(--purple);
+    color: #fff
+}
+
+.tab-green {
+    background: var(--green);
+    color: #fff
+}
+
+.hero {
+    background: #fff;
+    border: 4px solid var(--dark);
+    border-radius: 34px;
+    box-shadow: 10px 10px 0 var(--dark)
+}
+
+.product {
+    background: #fff;
+    border: 4px solid var(--dark);
+    border-radius: 28px;
+    box-shadow: 8px 8px 0 var(--dark);
+    overflow: hidden;
+    transition: .35s;
+    display: flex;
+    flex-direction: column
+}
+
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 13px 13px 0 var(--dark)
+}
+
+.product img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--dark)
+}
+
+.product-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column
+}
+
+.badge {
+    display: inline-block;
+    background: #FFE57F;
+    border: 3px solid var(--dark);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-family: Fredoka, sans-serif;
+    font-weight: 700;
+    box-shadow: 3px 3px 0 var(--dark)
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 25px;
+    border-radius: 50px;
+    border: 3px solid var(--dark);
+    box-shadow: 5px 5px 0 var(--dark);
+    font-family: Fredoka, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .25s
+}
+
+.btn:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0 var(--dark)
+}
+
+.primary {
+    background: var(--cyan);
+    color: var(--dark)
+}
+
+.secondary {
+    background: #fff
+}
+
+.title {
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: .95;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 4px 4px 0 var(--yellow), 8px 8px 0 rgba(0, 0, 0, .1);
+    -webkit-text-stroke: 2px var(--dark)
+}
+
+.option,
+.step {
+    background: #fff;
+    border: 3px solid var(--dark);
+    border-radius: 22px;
+    box-shadow: 5px 5px 0 var(--dark);
+    padding: 20px
+}
+
+.gallery {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 4px solid var(--dark);
+    border-radius: 24px;
+    box-shadow: 6px 6px 0 var(--dark)
+}
+
+.idea {
+    background: linear-gradient(135deg, #FF107A, #583d9e);
+    border: 4px solid var(--dark);
+    border-radius: 34px;
+    box-shadow: 10px 10px 0 var(--dark);
+    color: #fff
+}
+
+.footer {
+    background: var(--purple);
+    border-top: 8px solid var(--dark);
+    border-radius: 60px 60px 0 0
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: .6s
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: none
+}
+
+@media(max-width:767px) {
+    .nav-container {
+        left: 0;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        flex-direction: row !important;
+        justify-content: space-around;
+        padding: 8px;
+        background: var(--dark);
+        border-radius: 22px 22px 0 0
+    }
+
+    .nav-tab {
+        border: 3px solid var(--dark);
+        border-radius: 18px;
+        padding: 8px !important;
+        width: 58px;
+        height: 58px;
+        justify-content: center
+    }
+
+    .nav-label {
+        display: none
+    }
+
+    .nav-tab:hover,
+    .active {
+        transform: translateY(-5px)
+    }
+
+    main {
+        padding-left: 1rem !important;
+        padding-bottom: 90px !important
+    }
+
+    .footer {
+        border-radius: 40px 40px 0 0
+    }
+}
+
+/* =========================================================
+   CARRUSEL CUMPLEAÑOS
+========================================================= */
+
+.birthday-carousel {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    background: #EBE5DB;
+    border-radius: 22px 22px 0 0;
+}
+
+
+/* CONTENEDOR DE LAS IMÁGENES */
+
+.birthday-carousel .carousel-track {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    transition: transform 0.45s ease;
+}
+
+
+/* IMÁGENES */
+
+.birthday-carousel .carousel-image {
+    flex: 0 0 100% !important;
+
+    width: 100% !important;
+    min-width: 100% !important;
+
+    height: 100% !important;
+    min-height: 100% !important;
+
+    max-width: none !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    display: block !important;
+}
+
+
+/* =========================================================
+   FLECHAS
+========================================================= */
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    border: 3px solid #2A0845;
+
+    background: white;
+    color: #2A0845;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    line-height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.2s;
+}
+
+
+.carousel-prev {
+    left: 10px;
+}
+
+
+.carousel-next {
+    right: 10px;
+}
+
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    transform: translateY(-50%) scale(1.08);
+    background: #FFD100;
+}
+
+
+/* =========================================================
+   PUNTOS
+========================================================= */
+
+.carousel-dots {
+    position: absolute;
+
+    bottom: 12px;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 7px;
+
+    z-index: 10;
+}
+
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    border: 2px solid #2A0845;
+
+    background: white;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.carousel-dot.active {
+    background: #FF107A;
+    transform: scale(1.2);
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .birthday-carousel {
+        height: 430px;
+    }
+
+    .birthday-carousel .carousel-image {
+        height: 100% !important;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        width: 38px;
+        height: 38px;
+        font-size: 27px;
+    }
+
+}
